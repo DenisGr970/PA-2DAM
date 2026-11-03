@@ -1,3 +1,5 @@
+package practica1.pkg5_grafos;
+
 
 import java.util.ArrayList;
 
@@ -105,4 +107,54 @@ public class Grafo {
             }
         }
     }
+    
+    
+    public void contarVertices() {
+        
+        int contador = 0;
+        
+        for(int i = 0; i<vertices.size(); i++) {
+            
+            contador++;
+           
+            
+        }
+        
+         System.out.println("Numero de vertices:  " +contador );
+        
+        
+    }
+    
+    public void contarAristas() {
+             int contador = 0;
+        
+        for(int i = 0; i<aristas.size(); i++) {
+            
+            contador++;
+           
+            
+        }
+        
+         System.out.println("Numero de aristas:  " +contador );
+        
+        
+    }
+    
+    public void eliminarArista(String origen, String destino) {
+        
+        
+        for (Arista a : aristas) {
+            System.out.println(a);
+            
+            if(origen!=null && destino !=null) {
+                
+                aristas.remove(a);
+            
+            }
+            
+            
+        }
+        
+    }
+    
 }

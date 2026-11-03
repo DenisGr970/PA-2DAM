@@ -1,3 +1,8 @@
+package practica1.pkg5_grafos;
+
+
+import practica1.pkg5_grafos.Grafo;
+
 
 public class Main {
 
@@ -34,5 +39,14 @@ public class Main {
 
         System.out.println();
         grafo.mostrarVecinos("Madrid");
+        
+// Método contarVertices()
+        grafo.contarVertices();
+   // Método contarAristas()
+        grafo.contarAristas();
+        
     }
+    
+   
+    
 }

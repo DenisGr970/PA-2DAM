@@ -2,6 +2,7 @@ package practica1.pkg5_grafos;
 
 
 import java.util.ArrayList;
+import java.util.Deque;
 
 public class Grafo {
 
@@ -184,8 +185,27 @@ public class Grafo {
             
         }
         
-        return vecinos;
+        return vecinos; 
         
     }
+    
+    
+    public boolean existeUnaRuta(String origen, String destino) {
+        
+        if(origen.isEmpty() || destino.isEmpty()) {
+            
+            System.out.println("La ruta no puede estar vacia");
+            return false;
+            
+        }
+        
+        
+        
+        
+        
+        
+    }
+    
+    
     
 }

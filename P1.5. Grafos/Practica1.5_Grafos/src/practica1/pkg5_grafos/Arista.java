@@ -24,3 +24,4 @@ public class Arista {
         return origen + " <-> " + destino;
     }
 }
+    

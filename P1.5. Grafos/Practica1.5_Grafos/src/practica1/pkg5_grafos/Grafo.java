@@ -157,4 +157,35 @@ public class Grafo {
         
     }
     
+    
+    public  ArrayList<Vertice> obtenerVecinos (Vertice c) {
+        
+        ArrayList<Vertice> vecinos = new ArrayList();
+        
+        if(c == null) {
+            
+            return vecinos;
+            
+            
+        }
+        
+        for(Arista a: aristas) {
+            
+            if(a.getOrigen() == c) {
+                
+                vecinos.add(a.getDestino());
+                
+            } else if(a.getDestino() == c) {
+                
+                vecinos.add(a.getOrigen());
+                
+            }
+            
+            
+        }
+        
+        return vecinos;
+        
+    }
+    
 }

@@ -1,8 +1,6 @@
 package practica1.pkg5_grafos;
 
-
 import practica1.pkg5_grafos.Grafo;
-
 
 public class Main {
 
@@ -17,10 +15,10 @@ public class Main {
         grafo.agregarVertice("Albacete");
 
         // Añadir conexiones
-        grafo.agregarArista("Madrid", "Toledo");
-        grafo.agregarArista("Madrid", "Cuenca");
-        grafo.agregarArista("Toledo", "Albacete");
-        grafo.agregarArista("Cuenca", "Albacete");
+        grafo.agregarArista("Madrid", "Toledo",72);
+        grafo.agregarArista("Madrid", "Cuenca",168);
+        grafo.agregarArista("Toledo", "Albacete",250);
+        grafo.agregarArista("Cuenca", "Albacete",140);
 
         System.out.println("VERTICES:");
         grafo.mostrarVertices();
@@ -39,14 +37,37 @@ public class Main {
 
         System.out.println();
         grafo.mostrarVecinos("Madrid");
-        
+
 // Método contarVertices()
         grafo.contarVertices();
-   // Método contarAristas()
+        // Método contarAristas()
         grafo.contarAristas();
+
         
+        // Ruta de Madrid a Albacete 
+        System.out.println("Ruta Madrid a Albacete: " + grafo.buscarRutaDFS("Madrid", "Albacete"));
+        
+        
+        // Eliminamos la conexión entre Toledo y Albacete
+        grafo.eliminarArista("Toledo", "Albacete");
+        
+        // Volvemos a pintar la  ruta
+        System.out.println("Ruta tras eliminar Toledo-Albacete: " + grafo.buscarRutaDFS("Madrid", "Albacete"));
+        
+        
+        
+        
+        // Eliminamos la conexión entre Cuenca y Albacete
+        
+        grafo.eliminarArista("Cuenca", "Albacete");
+          // Volvemos a pintar la  ruta Madrid-Albacete
+          
+        System.out.println("Ruta tras eliminar Cuenca- Albacete: " + grafo.buscarRutaDFS("Madrid", "Albacete"));
+        
+        // Comprobamos la ruta Madrid-Madrid
+        
+        System.out.println("Ruta Madrid a Madrid: " + grafo.buscarRutaDFS("Madrid", "Madrid"));
+
     }
-    
-   
-    
+
 }
